@@ -14,14 +14,15 @@ Crea un nuevo fichero JS que contenga las siguientes líneas
 class Estudiante {
     nombre = "Tony";
     asignaturas = ["JavaScritp", "HTML", "CSS"];
-    obtenDatos(nombre, asignaturas){
-        return nombre
-        return asignaturas
+    obtenDatos(){
+        return{
+            nombre: this.nombre,
+            asignaturas: this.asignaturas
+        }
+        
     };
 }
 
 const nuevoEstudiante = new Estudiante();
 
-nuevoEstudiante.obtenDatos();
-
-console.log(nuevoEstudiante)
+console.log(nuevoEstudiante.obtenDatos())
